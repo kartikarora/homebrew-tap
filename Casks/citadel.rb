@@ -1,6 +1,6 @@
 cask "citadel" do
   version "0.1.0"
-  sha256 "06ae186da2455d7c65224333e1f20eb8a8d33b80c678d82b5de9584996492b7c"
+  sha256 "3a8b0e5345c65c5304da33f7a50f5c117f680ed1dc615105e42905ad0bcbc15e"
 
   url "https://github.com/kartikarora/citadel/releases/download/0.1.0/Citadel-#{version}-macOS-arm64.dmg",
       verified: "github.com/kartikarora/citadel/"
