@@ -5,7 +5,7 @@ class Citadel < Formula
 
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/kartikarora/citadel/releases/download/0.1.0/citadel-0.1.0-macOS-arm64.tar.gz"
-    sha256 "4444037d05886264c62abddc164b90a3ce3d5cf2329385c6dc57314131a5e27a"
+    sha256 "06ccbcbe15c64e7d894ffd4ac1b179f27a4eb3c340f5ea7fec2bd189b6e5566f"
   end
 
   def install
