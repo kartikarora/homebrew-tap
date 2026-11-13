@@ -1,8 +1,8 @@
 cask "citadel" do
-  version "__VERSION__"
-  sha256 "__DMG_SHA256__"
+  version "0.1.0"
+  sha256 "06ae186da2455d7c65224333e1f20eb8a8d33b80c678d82b5de9584996492b7c"
 
-  url "https://github.com/kartikarora/citadel/releases/download/#{version}/Citadel-#{version}.dmg",
+  url "https://github.com/kartikarora/citadel/releases/download/0.1.0/Citadel-#{version}-macOS-arm64.dmg",
       verified: "github.com/kartikarora/citadel/"
   name "Citadel"
   desc "Native macOS command center for managing AI coding skills & MCP servers"
