@@ -1,9 +1,8 @@
 cask "citadel" do
   version "0.1.0"
-  sha256 "bca57643dd9b70348527f39631d14999b8d0f6bf5bb5ea9bbf499fd5945a5cb6"
+  sha256 "919b71da67d498d05a4cdb2061dc7428c25862ae60fd9438a2baf32df05c4a70"
 
-  url "https://github.com/kartikarora/citadel/releases/download/0.1.0/Citadel-#{version}-macOS-arm64.dmg",
-      verified: "github.com/kartikarora/citadel/"
+  url "https://github.com/kartikarora/citadel/releases/download/#{version}/Citadel-#{version}-macOS-arm64.dmg"
   name "Citadel"
   desc "Native macOS command center for managing AI coding skills & MCP servers"
   homepage "https://citadel.kartikarora.me/"
@@ -13,7 +12,7 @@ cask "citadel" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Citadel.app"
 
