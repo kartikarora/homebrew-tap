@@ -1,6 +1,6 @@
 cask "citadel" do
   version "0.1.0"
-  sha256 "919b71da67d498d05a4cdb2061dc7428c25862ae60fd9438a2baf32df05c4a70"
+  sha256 "8a137bda088cdcb2ef8e7d2b9a74e7ea2f622c1da4689812a0a7c8480c503edf"
 
   url "https://github.com/kartikarora/citadel/releases/download/#{version}/Citadel-#{version}-macOS-arm64.dmg"
   name "Citadel"
@@ -16,7 +16,23 @@ cask "citadel" do
 
   app "Citadel.app"
 
+  uninstall_preflight do
+    # 1. Execute standalone rollback script to materialize all symlinks into independent standalone folders
+    rollback_script = "#{Dir.home}/.citadel/rollback.sh"
+    if File.exist?(rollback_script) && File.executable?(rollback_script)
+      ohai "Citadel: Materializing symlinked skills before uninstall..."
+      system "/bin/bash", rollback_script
+    end
+
+    # 2. Clean up any CLI symlinks in ~/.local/bin
+    %w[citadel ctdl].each do |cmd|
+      target = "#{Dir.home}/.local/bin/#{cmd}"
+      FileUtils.rm_f(target) if File.exist?(target)
+    end
+  end
+
   zap trash: [
+    "~/.citadel",
     "~/Library/Application Support/Citadel",
     "~/Library/Caches/me.kartikarora.Citadel",
     "~/Library/Preferences/me.kartikarora.Citadel.plist",
