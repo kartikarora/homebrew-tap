@@ -1,11 +1,11 @@
 class Citadel < Formula
   desc "Command-line tool for Citadel AI skill & MCP manager"
   homepage "https://citadel.kartikarora.me/"
-  version "0.1.0"
+  version "0.1.1"
 
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/kartikarora/citadel/releases/download/#{version}/citadel-#{version}-macOS-arm64.tar.gz"
-    sha256 "ea1a245783f2782e94602b7df3033c381122051ad9507452cfc875892832ab14"
+    sha256 "a1e06831b755c0051d38a8eeb159519fe8c2070ec7539e2ef14c6ecac1f82e29"
   end
 
   def install
