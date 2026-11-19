@@ -1,19 +1,19 @@
 class KlaatSnapshot < Formula
-  desc "Klaat snapshot build - 2.2.0.49-ebcf5fe5"
+  desc "Klaat snapshot build - 2.2.0.51-5acffc3d"
   homepage "https://klaat.kartikarora.me"
-  version "2.2.0.49-ebcf5fe5"
+  version "2.2.0.51-5acffc3d"
 
   # Default URL (macOS ARM64) to satisfy Homebrew's static parsing requirement
-  url "https://distribute.kartikarora.me/bin/klaat/snapshot/2.2.0.49-ebcf5fe5/klaat-snapshot-macos-arm64-2.2.0.49-ebcf5fe5"
-  sha256 "394b3dae20852d30b27506abd3cadd70f43361d009262c596430dac185ae7cda"
+  url "https://distribute.kartikarora.me/bin/klaat/snapshot/2.2.0.51-5acffc3d/klaat-snapshot-macos-arm64-2.2.0.51-5acffc3d"
+  sha256 "70a5acbd2562b7f36b311145c21b46bb8bb115aadc18c3c95bbfcc208f1d8840"
 
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://distribute.kartikarora.me/bin/klaat/snapshot/2.2.0.49-ebcf5fe5/klaat-snapshot-linux-arm64-2.2.0.49-ebcf5fe5"
-      sha256 "31a052bd71cd3592a7d7a6b1fb8c1c7f244d5dce569037d61cae02f17808710c"
+      url "https://distribute.kartikarora.me/bin/klaat/snapshot/2.2.0.51-5acffc3d/klaat-snapshot-linux-arm64-2.2.0.51-5acffc3d"
+      sha256 "a7a54b13769166b984e127fb3be9b6f5e8413feea33d01e35b7c624f683528e4"
     elsif Hardware::CPU.intel?
-      url "https://distribute.kartikarora.me/bin/klaat/snapshot/2.2.0.49-ebcf5fe5/klaat-snapshot-linux-x64-2.2.0.49-ebcf5fe5"
-      sha256 "df289a2590a4e4f6d648d7a1dd139ffbc67da6afd12d61b96beafb26a90dc19c"
+      url "https://distribute.kartikarora.me/bin/klaat/snapshot/2.2.0.51-5acffc3d/klaat-snapshot-linux-x64-2.2.0.51-5acffc3d"
+      sha256 "ee21b6f96ccc229d57ef0c74b8923f368e867357be71b00ef561b6713f0c96de"
     end
   end
 
